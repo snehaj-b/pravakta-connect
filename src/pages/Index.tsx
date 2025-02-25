@@ -1,5 +1,4 @@
-
-import { Star, Clock, ArrowRight } from "lucide-react";
+import { Star, Clock, ArrowRight, Users, MessageSquare, Compass } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -51,6 +50,48 @@ const FloatingShapes = () => {
   );
 };
 
+const Timeline = () => {
+  const timelineSteps = [
+    {
+      title: "Create Your Profile",
+      description: "Sign up and tell us about your learning goals and interests",
+      icon: Users,
+    },
+    {
+      title: "Discover Mentors",
+      description: "Browse through our curated list of expert mentors in your field",
+      icon: Compass,
+    },
+    {
+      title: "Connect & Learn",
+      description: "Schedule sessions and start your learning journey",
+      icon: MessageSquare,
+    },
+  ];
+
+  return (
+    <div className="relative">
+      <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200" />
+      {timelineSteps.map((step, index) => (
+        <div
+          key={index}
+          className="relative flex items-center mb-12 fade-in"
+          style={{ animationDelay: `${index * 0.3}s` }}
+        >
+          <div className="w-1/2 pr-8 text-right">
+            <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+            <p className="text-muted-foreground">{step.description}</p>
+          </div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[#880015] rounded-full flex items-center justify-center">
+            <step.icon className="w-6 h-6 text-white" />
+          </div>
+          <div className="w-1/2 pl-8" />
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const Index = () => {
   const [mounted, setMounted] = useState(false);
 
@@ -64,7 +105,6 @@ const Index = () => {
     <div className="min-h-screen relative">
       <FloatingShapes />
       
-      {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <h1 className="text-2xl font-bold text-[#880015]">PRAVAKTA</h1>
@@ -77,7 +117,6 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <section className="pt-32 pb-20 relative">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center fade-in">
@@ -95,7 +134,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Featured Mentors */}
       <section className="py-20 bg-white/50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 fade-in">Featured Mentors</h2>
@@ -134,10 +172,95 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      <section className="py-20 bg-white/50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-16 fade-in">
+            Your Journey to Success
+          </h2>
+          <Timeline />
+        </div>
+      </section>
+
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center fade-in">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 fade-in">
+              <h2 className="text-3xl font-bold mb-6">Join Our Thriving Community</h2>
+              <p className="text-lg text-muted-foreground">
+                Connect with like-minded learners who share your interests and goals. Our
+                community feature helps you:
+              </p>
+              <ul className="space-y-4">
+                {[
+                  "Form study groups with peers in your field",
+                  "Share resources and learning materials",
+                  "Participate in community discussions",
+                  "Attend virtual meetups and workshops",
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#880015]" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <Button className="mt-6">
+                Explore Community <ArrowRight className="ml-2" />
+              </Button>
+            </div>
+            <div className="grid grid-cols-2 gap-4 fade-in">
+              <div className="space-y-4">
+                <img
+                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+                  alt="Community Discussion"
+                  className="rounded-lg shadow-lg hover-scale"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+                  alt="Study Group"
+                  className="rounded-lg shadow-lg hover-scale"
+                />
+              </div>
+              <div className="space-y-4 mt-8">
+                <img
+                  src="/mentor1.webp"
+                  alt="Virtual Meetup"
+                  className="rounded-lg shadow-lg hover-scale"
+                />
+                <img
+                  src="/mentor2.webp"
+                  alt="Workshop"
+                  className="rounded-lg shadow-lg hover-scale"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[#880015] text-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            {[
+              { number: "10,000+", label: "Active Members" },
+              { number: "500+", label: "Expert Mentors" },
+              { number: "50,000+", label: "Learning Hours" },
+            ].map((stat, index) => (
+              <div
+                key={index}
+                className="fade-in"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <div className="text-4xl font-bold mb-2">{stat.number}</div>
+                <div className="text-lg opacity-90">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center text-white fade-in">
             <h2 className="text-3xl font-bold mb-12">Why Choose PRAVAKTA</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
@@ -168,7 +291,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-20 bg-[#880015]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white fade-in">
