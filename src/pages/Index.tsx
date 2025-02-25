@@ -85,7 +85,7 @@ const Timeline = () => {
             <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
             <p className="text-muted-foreground">{step.description}</p>
           </div>
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[#880015] rounded-full flex items-center justify-center pulse"
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[#00095C] rounded-full flex items-center justify-center pulse"
                style={{ animationDelay: `${index * 0.3}s` }}>
             <step.icon className="w-6 h-6 text-white" />
           </div>
@@ -205,7 +205,7 @@ const Index = () => {
                   "Attend virtual meetups and workshops",
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#880015]" />
+                    <div className="w-2 h-2 rounded-full bg-[#00095C]" />
                     <span>{item}</span>
                   </li>
                 ))}
