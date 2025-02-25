@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -8,7 +9,7 @@
   :root {
     --background: 0 0% 95%;
     --foreground: 0 0% 10%;
-    --primary: 353 100% 27%;
+    --primary: 232 100% 18%;
     --primary-foreground: 0 0% 95%;
     --muted: 0 0% 90%;
     --muted-foreground: 0 0% 40%;
