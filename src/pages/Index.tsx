@@ -56,16 +56,19 @@ const Timeline = () => {
       title: "Create Your Profile",
       description: "Sign up and tell us about your learning goals and interests",
       icon: Users,
+      rightContent: "Get personalized recommendations based on your interests and goals",
     },
     {
       title: "Discover Mentors",
       description: "Browse through our curated list of expert mentors in your field",
       icon: Compass,
+      rightContent: "Access detailed mentor profiles with reviews and success stories",
     },
     {
       title: "Connect & Learn",
       description: "Schedule sessions and start your learning journey",
       icon: MessageSquare,
+      rightContent: "Choose flexible learning formats: 1-on-1 sessions, group workshops, or async mentoring",
     },
   ];
 
@@ -75,17 +78,21 @@ const Timeline = () => {
       {timelineSteps.map((step, index) => (
         <div
           key={index}
-          className="relative flex items-center mb-12 fade-in"
-          style={{ animationDelay: `${index * 0.3}s` }}
+          className="relative flex items-center mb-12"
         >
-          <div className="w-1/2 pr-8 text-right">
+          <div className="w-1/2 pr-8 text-right slide-in-left"
+               style={{ animationDelay: `${index * 0.3}s` }}>
             <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
             <p className="text-muted-foreground">{step.description}</p>
           </div>
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[#880015] rounded-full flex items-center justify-center">
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[#880015] rounded-full flex items-center justify-center pulse"
+               style={{ animationDelay: `${index * 0.3}s` }}>
             <step.icon className="w-6 h-6 text-white" />
           </div>
-          <div className="w-1/2 pl-8" />
+          <div className="w-1/2 pl-8 slide-in-right"
+               style={{ animationDelay: `${index * 0.3}s` }}>
+            <p className="text-muted-foreground">{step.rightContent}</p>
+          </div>
         </div>
       ))}
     </div>
@@ -210,26 +217,26 @@ const Index = () => {
             <div className="grid grid-cols-2 gap-4 fade-in">
               <div className="space-y-4">
                 <img
-                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+                  src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXBidzd2Y3g4a3ZsZG9wZnp5dXBvdDR4ajY3dWp3MHE1Y3FlbW95ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIPEqDGUULpEU0aQ/giphy.gif"
                   alt="Community Discussion"
-                  className="rounded-lg shadow-lg hover-scale"
+                  className="rounded-lg shadow-lg hover-scale w-full h-48 object-cover"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+                  src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWhndGpoMXhqNzZ6Y3c2eGlhOTkydnQxNmFyYnhiNG51ZGZ2OWx4dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0HlGu6yGT8X51Gko/giphy.gif"
                   alt="Study Group"
-                  className="rounded-lg shadow-lg hover-scale"
+                  className="rounded-lg shadow-lg hover-scale w-full h-48 object-cover"
                 />
               </div>
               <div className="space-y-4 mt-8">
                 <img
-                  src="/mentor1.webp"
+                  src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXBidzd2Y3g4a3ZsZG9wZnp5dXBvdDR4ajY3dWp3MHE1Y3FlbW95ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIPEqDGUULpEU0aQ/giphy.gif"
                   alt="Virtual Meetup"
-                  className="rounded-lg shadow-lg hover-scale"
+                  className="rounded-lg shadow-lg hover-scale w-full h-48 object-cover"
                 />
                 <img
-                  src="/mentor2.webp"
+                  src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW9oZ3V5dXhtOHowYjBrcjJieXFibmRoeWR5amFuOWU4Y2M4bmVqbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT9IgzoKnwFNmISR8I/giphy.gif"
                   alt="Workshop"
-                  className="rounded-lg shadow-lg hover-scale"
+                  className="rounded-lg shadow-lg hover-scale w-full h-48 object-cover"
                 />
               </div>
             </div>
