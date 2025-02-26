@@ -30,7 +30,7 @@ const Login = () => {
         </div>
 
         <div className="flex gap-2 p-1 bg-white/50 rounded-lg mb-8 shadow-sm">
-          <Button variant={role === "mentee" ? "default" : "ghost"} onClick={() => setRole("mentee")} className="">
+          <Button variant={role === "mentee" ? "default" : "ghost"} onClick={() => setRole("mentee")} className="px-[4px] py-[4px] rounded-sm">
             Mentee
           </Button>
           <Button variant={role === "mentor" ? "default" : "ghost"} className={`w-1/2 transition-all duration-300 ${role === "mentor" ? "bg-[#9b0060]/90 hover:bg-[#9b0060] shadow-sm" : "hover:bg-white/50"}`} onClick={() => setRole("mentor")}>
