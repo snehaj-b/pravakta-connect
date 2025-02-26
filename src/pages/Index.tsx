@@ -41,7 +41,8 @@ const FloatingShapes = () => {
             height: `${Math.random() * 200 + 100}px`,
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
-            background: i % 2 === 0 ? "#00095C" : "#000000",
+            background: i % 2 === 0 ? "#336dce" : "#9b0060",
+            opacity: i % 2 === 0 ? 0.1 : 0.08,
             animationDelay: `${i * 0.5}s`,
           }}
         />
@@ -85,7 +86,7 @@ const Timeline = () => {
             <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
             <p className="text-muted-foreground">{step.description}</p>
           </div>
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[#00095C] rounded-full flex items-center justify-center pulse"
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[#336dce] rounded-full flex items-center justify-center pulse"
                style={{ animationDelay: `${index * 0.3}s` }}>
             <step.icon className="w-6 h-6 text-white" />
           </div>
@@ -114,7 +115,7 @@ const Index = () => {
       
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-[#00095C]">PRAVAKTA</h1>
+          <h1 className="text-2xl font-bold text-[#336dce]">PRAVAKTA</h1>
           <div className="flex gap-4">
             <Button variant="ghost">About</Button>
             <Button variant="ghost">Find Mentors</Button>
@@ -205,7 +206,7 @@ const Index = () => {
                   "Attend virtual meetups and workshops",
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#00095C]" />
+                    <div className="w-2 h-2 rounded-full bg-[#336dce]" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -244,7 +245,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-[#00095C] text-white">
+      <section className="py-20 bg-[#336dce] text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {[
@@ -298,7 +299,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-[#00095C]">
+      <section className="py-20 bg-[#336dce]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white fade-in">
             <h2 className="text-3xl font-bold mb-6">
