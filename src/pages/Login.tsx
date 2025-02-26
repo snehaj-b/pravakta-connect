@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -6,13 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import FloatingShapes from "@/components/FloatingShapes";
-
 const Login = () => {
   const navigate = useNavigate();
   const [role, setRole] = useState<"mentor" | "mentee">("mentee");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !password) {
@@ -23,7 +20,6 @@ const Login = () => {
     toast.success(`Logged in as ${role}`);
     navigate("/");
   };
-
   return <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
       <FloatingShapes />
       
@@ -34,7 +30,7 @@ const Login = () => {
         </div>
 
         <div className="flex gap-2 p-1 bg-white/50 rounded-lg mb-8 shadow-sm">
-          <Button variant={role === "mentee" ? "default" : "ghost"} onClick={() => setRole("mentee")} className="px-[4px] py-[4px] rounded-sm">
+          <Button variant={role === "mentee" ? "default" : "ghost"} onClick={() => setRole("mentee")} className="px-[4px] py-[4px] rounded-sm text-base mx-[50px]">
             Mentee
           </Button>
           <Button variant={role === "mentor" ? "default" : "ghost"} className={`w-1/2 transition-all duration-300 ${role === "mentor" ? "bg-[#9b0060]/90 hover:bg-[#9b0060] shadow-sm" : "hover:bg-white/50"}`} onClick={() => setRole("mentor")}>
@@ -72,5 +68,4 @@ const Login = () => {
       </div>
     </div>;
 };
-
 export default Login;
