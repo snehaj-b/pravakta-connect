@@ -33,7 +33,7 @@ const Login = () => {
           <Button variant={role === "mentee" ? "default" : "ghost"} onClick={() => setRole("mentee")} className="py-[4px] text-base mx-[5px] px-[50px] rounded-xl">
             Mentee
           </Button>
-          <Button variant={role === "mentor" ? "default" : "ghost"} className={`w-1/2 transition-all duration-300 ${role === "mentor" ? "bg-[#9b0060]/90 hover:bg-[#9b0060] shadow-sm" : "hover:bg-white/50"}`} onClick={() => setRole("mentor")}>
+          <Button variant={role === "mentor" ? "default" : "ghost"} onClick={() => setRole("mentor")} className="mx-[5px] px-[50px] rounded-2xl">
             Mentor
           </Button>
         </div>
