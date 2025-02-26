@@ -4,7 +4,7 @@ import React from "react";
 const FloatingShapes = () => {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
-      {[...Array(5)].map((_, i) => (
+      {[...Array(8)].map((_, i) => (
         <div
           key={i}
           className={`floating-shape absolute rounded-full`}

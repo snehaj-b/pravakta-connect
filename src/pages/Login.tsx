@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -5,11 +6,13 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import FloatingShapes from "@/components/FloatingShapes";
+
 const Login = () => {
   const navigate = useNavigate();
   const [role, setRole] = useState<"mentor" | "mentee">("mentee");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !password) {
@@ -20,6 +23,7 @@ const Login = () => {
     toast.success(`Logged in as ${role}`);
     navigate("/");
   };
+
   return <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
       <FloatingShapes />
       
@@ -68,4 +72,5 @@ const Login = () => {
       </div>
     </div>;
 };
+
 export default Login;
