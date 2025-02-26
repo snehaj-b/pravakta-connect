@@ -28,17 +28,19 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
       <FloatingShapes />
       
-      <div className="w-full max-w-md p-8 rounded-2xl bg-white/90 backdrop-blur-lg shadow-xl relative z-10 fade-in">
+      <div className="w-full max-w-md p-8 rounded-2xl bg-white/80 backdrop-blur-lg shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative z-10 fade-in border border-white/20">
         <div className="text-center mb-8">
           <h1 className="text-2xl font-bold text-[#336dce] mb-2">Welcome Back</h1>
           <p className="text-muted-foreground">Continue your learning journey</p>
         </div>
 
-        <div className="flex gap-2 p-1 bg-muted rounded-lg mb-8">
+        <div className="flex gap-2 p-1 bg-white/50 rounded-lg mb-8 shadow-sm">
           <Button
             variant={role === "mentee" ? "default" : "ghost"}
             className={`w-1/2 transition-all duration-300 ${
-              role === "mentee" ? "bg-[#336dce]" : ""
+              role === "mentee" 
+                ? "bg-[#336dce]/90 hover:bg-[#336dce] shadow-sm" 
+                : "hover:bg-white/50"
             }`}
             onClick={() => setRole("mentee")}
           >
@@ -47,7 +49,9 @@ const Login = () => {
           <Button
             variant={role === "mentor" ? "default" : "ghost"}
             className={`w-1/2 transition-all duration-300 ${
-              role === "mentor" ? "bg-[#9b0060]" : ""
+              role === "mentor" 
+                ? "bg-[#9b0060]/90 hover:bg-[#9b0060] shadow-sm" 
+                : "hover:bg-white/50"
             }`}
             onClick={() => setRole("mentor")}
           >
@@ -64,7 +68,7 @@ const Login = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="hover-scale-subtle"
+              className="hover-scale-subtle bg-white/50 border-white/20 focus:border-[#336dce]/30 transition-all duration-300"
               required
             />
           </div>
@@ -77,28 +81,30 @@ const Login = () => {
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="hover-scale-subtle"
+              className="hover-scale-subtle bg-white/50 border-white/20 focus:border-[#336dce]/30 transition-all duration-300"
               required
             />
           </div>
 
           <Button
             type="submit"
-            className={`w-full ${
-              role === "mentor" ? "bg-[#9b0060]" : "bg-[#336dce]"
-            } hover:opacity-90 transition-all duration-300`}
+            className={`w-full shadow-sm transition-all duration-300 ${
+              role === "mentor" 
+                ? "bg-[#9b0060]/90 hover:bg-[#9b0060]" 
+                : "bg-[#336dce]/90 hover:bg-[#336dce]"
+            }`}
           >
             Login as {role === "mentor" ? "Mentor" : "Mentee"}
           </Button>
         </form>
 
         <div className="mt-6 text-center text-sm text-muted-foreground">
-          <a href="#" className="text-[#336dce] hover:underline">
+          <a href="#" className="text-[#336dce] hover:underline transition-colors duration-300">
             Forgot password?
           </a>
           <p className="mt-2">
             Don't have an account?{" "}
-            <a href="#" className="text-[#336dce] hover:underline">
+            <a href="#" className="text-[#336dce] hover:underline transition-colors duration-300">
               Sign up
             </a>
           </p>
