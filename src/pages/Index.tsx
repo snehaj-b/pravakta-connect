@@ -7,6 +7,7 @@ import Timeline from "@/components/Timeline";
 import MentorCard from "@/components/MentorCard";
 import NavigationBar from "@/components/NavigationBar";
 import CommunitySection from "@/components/CommunitySection";
+import { Link } from "react-router-dom";
 
 const mentors = [
   {
@@ -59,9 +60,11 @@ const Index = () => {
               Transform your learning journey with personalized guidance from industry experts
               and accomplished professionals.
             </p>
-            <Button size="lg" className="animate-bounce">
-              Find Your Mentor <ArrowRight className="ml-2" />
-            </Button>
+            <Link to="/login">
+              <Button size="lg" className="animate-bounce">
+                Find Your Mentor <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -157,9 +160,11 @@ const Index = () => {
               <Button size="lg" variant="secondary">
                 Learn More
               </Button>
-              <Button size="lg" variant="outline" className="bg-white/10">
-                Get Started
-              </Button>
+              <Link to="/login">
+                <Button size="lg" variant="outline" className="bg-white/10">
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
