@@ -16,7 +16,9 @@ const NavigationBar = () => {
           <Link to="/login">
             <Button variant="outline">Login</Button>
           </Link>
-          <Button>Get Started</Button>
+          <Link to="/signup">
+            <Button>Sign Up</Button>
+          </Link>
         </div>
       </div>
     </nav>
