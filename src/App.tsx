@@ -8,7 +8,6 @@ import Index from "./pages/Index";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import NotFound from "./pages/NotFound";
-import MenteeProfile from "./pages/MenteeProfile";
 
 const queryClient = new QueryClient();
 
@@ -22,7 +21,6 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/mentee-profile" element={<MenteeProfile />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
