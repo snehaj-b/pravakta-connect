@@ -1,45 +1,46 @@
 
-import React from "react";
-import { Star, Clock } from "lucide-react";
+import React from 'react';
+import { Star, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface MentorCardProps {
+  id: number;
   name: string;
-  field: string;
+  skill: string;
+  date: string;
   rating: number;
-  hours: number;
   image: string;
-  qualifications: string;
 }
 
-const MentorCard: React.FC<MentorCardProps> = ({
-  name,
-  field,
-  rating,
-  hours,
-  image,
-  qualifications,
-}) => {
+const MentorCard = ({ id, name, skill, date, rating, image }: MentorCardProps) => {
+  const stars = Array(5).fill(0);
+  
   return (
-    <div className="glass-card rounded-xl p-6 hover-scale fade-in">
-      <div className="relative mb-4">
-        <div className="aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
-          <img src={image} alt={name} className="w-full h-full object-cover" />
+    <Link to={`/mentee-dashboard/mentor/${id}`} className="block">
+      <div className="bg-[#00095C]/10 rounded-lg overflow-hidden mb-4 relative hover:shadow-md transition-shadow">
+        <img src={image} alt={name} className="w-full h-32 object-cover" />
+        
+        <div className="p-3">
+          <div className="text-[#00095C] font-medium">{name}</div>
+          <div className="text-[#9b0060]">{skill}</div>
+          <div className="text-[#336dce]">{date}</div>
+          
+          <div className="flex mt-1">
+            {stars.map((_, index) => (
+              <Star 
+                key={index}
+                size={14}
+                className={index < rating ? 'text-yellow-500 fill-yellow-500' : 'text-gray-300'}
+              />
+            ))}
+          </div>
         </div>
+        
+        <button className="absolute bottom-2 right-2 text-[#00095C]">
+          <ChevronDown size={18} />
+        </button>
       </div>
-      <h3 className="text-xl font-semibold mb-2">{name}</h3>
-      <p className="text-muted-foreground mb-2">{field}</p>
-      <p className="text-sm mb-4">{qualifications}</p>
-      <div className="flex items-center justify-between">
-        <div className="flex items-center">
-          <Star className="w-5 h-5 text-yellow-500 fill-current" />
-          <span className="ml-1 font-medium">{rating}</span>
-        </div>
-        <div className="flex items-center text-muted-foreground">
-          <Clock className="w-4 h-4 mr-1" />
-          <span className="text-sm">{hours}+ hours</span>
-        </div>
-      </div>
-    </div>
+    </Link>
   );
 };
 

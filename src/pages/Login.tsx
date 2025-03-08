@@ -21,7 +21,11 @@ const Login = () => {
     }
     // Here you would typically handle the login logic
     toast.success(`Logged in as ${role}`);
-    navigate("/");
+    if (role === "mentee") {
+      navigate("/mentee-dashboard");
+    } else {
+      navigate("/"); // For mentor, keep the default for now
+    }
   };
   
   return <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
