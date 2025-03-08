@@ -4,15 +4,28 @@ import { Star, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface MentorCardProps {
-  id: number;
+  id?: number;
   name: string;
-  skill: string;
-  date: string;
+  skill?: string;
+  field?: string; // Added to support the field property from Index.tsx
+  date?: string;
   rating: number;
   image: string;
+  hours?: number; // Added to support the hours property
+  qualifications?: string; // Added to support the qualifications property
 }
 
-const MentorCard = ({ id, name, skill, date, rating, image }: MentorCardProps) => {
+const MentorCard = ({ 
+  id = 0, // Default value for id
+  name, 
+  skill, 
+  field, // New field property
+  date = "Available now", // Default value for date
+  rating, 
+  image,
+  hours,
+  qualifications
+}: MentorCardProps) => {
   const stars = Array(5).fill(0);
   
   return (
@@ -22,8 +35,16 @@ const MentorCard = ({ id, name, skill, date, rating, image }: MentorCardProps) =
         
         <div className="p-3">
           <div className="text-[#00095C] font-medium">{name}</div>
-          <div className="text-[#9b0060]">{skill}</div>
+          <div className="text-[#9b0060]">{skill || field}</div> {/* Use skill or field */}
           <div className="text-[#336dce]">{date}</div>
+          
+          {hours && (
+            <div className="text-[#336dce] text-sm">{hours} hours</div>
+          )}
+          
+          {qualifications && (
+            <div className="text-[#00095C] text-xs mt-1">{qualifications}</div>
+          )}
           
           <div className="flex mt-1">
             {stars.map((_, index) => (
