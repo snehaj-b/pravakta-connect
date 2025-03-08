@@ -18,7 +18,7 @@ interface UpcomingSessionsProps {
 const UpcomingSessions = ({ sessions }: UpcomingSessionsProps) => {
   return (
     <div className="bg-[#00095C]/10 p-4 rounded-lg mb-6">
-      <h2 className="text-lg font-medium text-[#00095C] mb-4">Upcomming Session</h2>
+      <h2 className="text-lg font-medium text-[#00095C] mb-4">Upcoming Sessions</h2>
       
       {sessions.map((session) => (
         <div 

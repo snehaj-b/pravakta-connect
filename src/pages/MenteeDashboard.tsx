@@ -6,9 +6,7 @@ import MenteeProfileCard from '@/components/MenteeProfileCard';
 import MenteeNavTabs from '@/components/MenteeNavTabs';
 import InterestsFilter from '@/components/InterestsFilter';
 import MentorCard from '@/components/MentorCard';
-import UpcomingSessions from '@/components/UpcomingSessions';
 import ProgressChart from '@/components/ProgressChart';
-import TimeSpent from '@/components/TimeSpent';
 import FloatingShapes from '@/components/FloatingShapes';
 
 const MenteeDashboard = () => {
@@ -24,23 +22,6 @@ const MenteeDashboard = () => {
 
   const interests = [
     "Design", "UI/UX", "Web Development", "Mobile App", "Backend", "DevOps", "Data Science", "Machine Learning"
-  ];
-
-  const upcomingSessions = [
-    {
-      id: 1,
-      topic: "UI/UX",
-      mentorName: "John Smith",
-      additionalInfo: "Basic Principles",
-      dateTime: "Aug 25, 2:00 PM",
-    },
-    {
-      id: 2,
-      topic: "UI/UX",
-      mentorName: "Sarah Johnson",
-      additionalInfo: "Advanced Concepts",
-      dateTime: "Aug 27, 4:00 PM",
-    },
   ];
 
   const mentors = [
@@ -108,7 +89,7 @@ const MenteeDashboard = () => {
           <MenteeNavTabs />
           
           <div className="grid grid-cols-3 gap-6">
-            <div className="col-span-3 md:col-span-2">
+            <div className="col-span-3 md:col-span-3">
               <InterestsFilter 
                 interests={interests}
                 selectedInterest={selectedInterest}
@@ -119,15 +100,6 @@ const MenteeDashboard = () => {
                 {mentors.map((mentor) => (
                   <MentorCard key={mentor.id} {...mentor} />
                 ))}
-              </div>
-            </div>
-            
-            <div className="col-span-3 md:col-span-1">
-              <UpcomingSessions sessions={upcomingSessions} />
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4">
-                <ProgressChart />
-                <TimeSpent />
               </div>
             </div>
           </div>

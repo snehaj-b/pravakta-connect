@@ -6,6 +6,9 @@ import MenteeProfileCard from '@/components/MenteeProfileCard';
 import MenteeNavTabs from '@/components/MenteeNavTabs';
 import FloatingShapes from '@/components/FloatingShapes';
 import { Calendar } from '@/components/ui/calendar';
+import UpcomingSessions from '@/components/UpcomingSessions';
+import TimeSpent from '@/components/TimeSpent';
+import ProgressChart from '@/components/ProgressChart';
 
 export const MenteeCalendar = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
@@ -18,27 +21,20 @@ export const MenteeCalendar = () => {
     profilePicture: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=800&auto=format&fit=crop",
   };
 
-  const upcomingEvents = [
+  const upcomingSessions = [
     {
       id: 1,
-      title: "UI/UX Session with John Smith",
-      date: "Aug 28, 2023",
-      time: "9:00 AM - 10:00 AM",
-      type: "1-on-1 Session",
+      topic: "UI/UX",
+      mentorName: "John Smith",
+      additionalInfo: "Basic Principles",
+      dateTime: "Aug 25, 2:00 PM",
     },
     {
       id: 2,
-      title: "Design Community Meetup",
-      date: "Aug 30, 2023",
-      time: "2:00 PM - 3:30 PM",
-      type: "Group Session",
-    },
-    {
-      id: 3,
-      title: "Web Development Workshop",
-      date: "Sep 2, 2023",
-      time: "11:00 AM - 12:30 PM",
-      type: "Workshop",
+      topic: "UI/UX",
+      mentorName: "Sarah Johnson",
+      additionalInfo: "Advanced Concepts",
+      dateTime: "Aug 27, 4:00 PM",
     },
   ];
   
@@ -65,26 +61,14 @@ export const MenteeCalendar = () => {
                   className="rounded-md border"
                 />
               </div>
+              <div className="mt-6">
+                <ProgressChart />
+              </div>
             </div>
             
             <div className="md:col-span-1">
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4 shadow-sm">
-                <h2 className="text-lg font-medium text-[#00095C] mb-4">Upcoming Events</h2>
-                
-                {upcomingEvents.map((event) => (
-                  <div 
-                    key={event.id}
-                    className="mb-4 p-3 bg-white/50 rounded-lg hover:bg-white/70 transition-colors cursor-pointer"
-                  >
-                    <h3 className="font-medium text-[#00095C]">{event.title}</h3>
-                    <p className="text-[#336dce]">{event.date}</p>
-                    <p className="text-[#00095C]">{event.time}</p>
-                    <span className="inline-block mt-2 px-2 py-1 bg-[#336dce]/10 text-[#336dce] text-xs rounded-full">
-                      {event.type}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              <UpcomingSessions sessions={upcomingSessions} />
+              <TimeSpent />
             </div>
           </div>
         </div>

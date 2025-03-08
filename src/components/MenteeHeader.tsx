@@ -8,7 +8,7 @@ const MenteeHeader = () => {
       <div className="flex items-center">
         <h1 className="text-2xl font-bold">
           <span className="text-[#00095C]">PRA</span>
-          <span className="text-[#9b0060]">VEET</span>
+          <span className="text-[#9b0060]">VAKTA</span>
         </h1>
       </div>
       
