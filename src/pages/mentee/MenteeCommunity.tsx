@@ -1,6 +1,5 @@
 
 import React, { useState } from "react";
-import MenteeProfileCard from "@/components/mentee/MenteeProfileCard";
 import MenteeNavTabs from "@/components/mentee/MenteeNavTabs";
 import InterestsFilter from "@/components/mentee/InterestsFilter";
 import CommunityCard from "@/components/mentee/CommunityCard";
@@ -47,10 +46,6 @@ const MenteeCommunity: React.FC = () => {
   
   return (
     <div className="max-w-5xl mx-auto">
-      <div className="mb-6">
-        <MenteeProfileCard />
-      </div>
-      
       <div className="mb-6">
         <MenteeNavTabs />
       </div>

@@ -43,7 +43,7 @@ const Login = () => {
           <Button variant={role === "mentee" ? "default" : "ghost"} onClick={() => setRole("mentee")} className="py-[4px] text-base mx-[5px] px-[50px] rounded-xl">
             Mentee
           </Button>
-          <Button variant={role === "mentor" ? "default" : "ghost"} className={`w-1/2 transition-all duration-300 ${role === "mentor" ? "bg-[#9b0060]/90 hover:bg-[#9b0060] shadow-sm" : "hover:bg-white/50"}`} onClick={() => setRole("mentor")}>
+          <Button variant={role === "mentor" ? "default" : "ghost"} className={`w-1/2 transition-all duration-300 ${role === "mentor" ? "bg-[#A10015]/90 hover:bg-[#A10015] shadow-sm" : "hover:bg-white/50"}`} onClick={() => setRole("mentor")}>
             Mentor
           </Button>
         </div>
@@ -59,7 +59,7 @@ const Login = () => {
             <Input id="password" type="password" placeholder="Enter your password" value={password} onChange={e => setPassword(e.target.value)} className="hover-scale-subtle bg-white/50 border-white/20 focus:border-[#336dce]/30 transition-all duration-300" required />
           </div>
 
-          <Button type="submit" className={`w-full shadow-sm transition-all duration-300 ${role === "mentor" ? "bg-[#9b0060]/90 hover:bg-[#9b0060]" : "bg-[#336dce]/90 hover:bg-[#336dce]"}`}>
+          <Button type="submit" className={`w-full shadow-sm transition-all duration-300 ${role === "mentor" ? "bg-[#A10015]/90 hover:bg-[#A10015]" : "bg-[#336dce]/90 hover:bg-[#336dce]"}`}>
             Login as {role === "mentor" ? "Mentor" : "Mentee"}
           </Button>
         </form>

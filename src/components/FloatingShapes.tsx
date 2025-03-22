@@ -13,7 +13,7 @@ const FloatingShapes = () => {
             height: `${Math.random() * 200 + 100}px`,
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
-            background: i % 2 === 0 ? "#336dce" : "#9b0060",
+            background: i % 2 === 0 ? "#336dce" : "#A10015",
             opacity: i % 2 === 0 ? 0.1 : 0.08,
             animationDelay: `${i * 0.5}s`,
           }}

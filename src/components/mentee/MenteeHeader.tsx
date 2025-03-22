@@ -8,7 +8,7 @@ const MenteeHeader: React.FC = () => {
     <header className="bg-white border-b p-4 flex justify-between items-center">
       <h1 className="text-xl font-bold">
         <span className="text-[#00095C]">PRA</span>
-        <span className="text-[#9b0060]">VAKTA</span>
+        <span className="text-[#A10015]">VAKTA</span>
       </h1>
       
       <div className="flex space-x-4 items-center">
