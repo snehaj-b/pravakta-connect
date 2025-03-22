@@ -18,7 +18,7 @@ interface UpcomingSessionsProps {
 
 const UpcomingSessions: React.FC<UpcomingSessionsProps> = ({ sessions }) => {
   return (
-    <div className="bg-white shadow rounded-lg overflow-hidden border-t-4 border-[#A10015]">
+    <div className="bg-white shadow rounded-lg overflow-hidden">
       <h2 className="text-lg font-semibold p-4 border-b">Upcoming Sessions</h2>
       
       <div className="divide-y">
@@ -39,7 +39,7 @@ const UpcomingSessions: React.FC<UpcomingSessionsProps> = ({ sessions }) => {
                 <p className="text-xs text-gray-500">{session.date}, {session.time}</p>
               </div>
               
-              <Button className="bg-[#A10015] text-white hover:bg-[#A10015]/90">
+              <Button className="bg-[#336dce] text-white hover:bg-[#336dce]/90">
                 Join
               </Button>
             </div>

@@ -1,5 +1,6 @@
 
 import React from "react";
+import MenteeProfileCard from "@/components/mentee/MenteeProfileCard";
 import MenteeNavTabs from "@/components/mentee/MenteeNavTabs";
 import { Calendar } from "@/components/ui/calendar";
 import UpcomingSessions from "@/components/mentee/UpcomingSessions";
@@ -40,6 +41,10 @@ const MenteeCalendar: React.FC = () => {
   
   return (
     <div className="max-w-5xl mx-auto">
+      <div className="mb-6">
+        <MenteeProfileCard />
+      </div>
+      
       <div className="mb-6">
         <MenteeNavTabs />
       </div>
