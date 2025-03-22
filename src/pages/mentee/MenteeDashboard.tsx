@@ -1,6 +1,5 @@
 
 import React from "react";
-import MenteeProfileCard from "@/components/mentee/MenteeProfileCard";
 import MenteeNavTabs from "@/components/mentee/MenteeNavTabs";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
@@ -13,7 +12,7 @@ const SessionCard = ({ title, sessions }: { title: string, sessions: any[] }) =>
       <h2 className="text-xl font-semibold mb-4">{title}</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {sessions.map((session, index) => (
-          <div key={index} className="bg-white shadow rounded-lg overflow-hidden">
+          <div key={index} className="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition-shadow">
             <div className="h-32 bg-blue-100">
               <img 
                 src="/lovable-uploads/94db9bc8-af8d-4bcc-8287-1a47d17ca41c.png" 
@@ -24,7 +23,7 @@ const SessionCard = ({ title, sessions }: { title: string, sessions: any[] }) =>
             <div className="p-3">
               <h3 className="font-medium">{session.name}</h3>
               <p className="text-sm text-gray-600">{session.skill}</p>
-              <p className="text-xs text-gray-500">{session.date}</p>
+              <p className="text-xs text-[#A10015]">{session.date}</p>
             </div>
           </div>
         ))}
@@ -56,26 +55,22 @@ const MenteeDashboard: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto">
       <div className="mb-6">
-        <MenteeProfileCard />
-      </div>
-      
-      <div className="mb-6">
         <MenteeNavTabs />
       </div>
       
       <div className="mb-6 relative">
-        <div className="h-40 bg-blue-100 rounded-lg overflow-hidden relative">
+        <div className="h-40 bg-gradient-to-r from-[#336dce] to-[#A10015] rounded-lg overflow-hidden relative">
           <img 
             src="/lovable-uploads/94db9bc8-af8d-4bcc-8287-1a47d17ca41c.png" 
             alt="Dashboard Banner" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover mix-blend-overlay opacity-30"
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="max-w-md w-full px-4">
               <Input 
                 className="bg-white/90 backdrop-blur-sm border-0 shadow-lg" 
                 placeholder="Search for mentors, skills, or sessions..."
-                suffix={<Search className="text-gray-400" size={16} />}
+                suffix={<Search className="text-[#A10015]" size={16} />}
               />
             </div>
           </div>
@@ -87,7 +82,7 @@ const MenteeDashboard: React.FC = () => {
       <SessionCard title="Free Sessions" sessions={freeSessions} />
       
       <div className="text-center mt-10 mb-8">
-        <Button variant="outline" className="rounded-full">
+        <Button variant="outline" className="rounded-full border-[#A10015] text-[#A10015] hover:bg-[#A10015]/10">
           More
         </Button>
       </div>

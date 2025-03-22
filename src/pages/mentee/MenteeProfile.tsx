@@ -1,9 +1,9 @@
 
 import React from "react";
-import MenteeProfileCard from "@/components/mentee/MenteeProfileCard";
 import ProgressChart from "@/components/mentee/ProgressChart";
 import TimeSpent from "@/components/mentee/TimeSpent";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import MenteeNavTabs from "@/components/mentee/MenteeNavTabs";
 
 const MenteeProfile: React.FC = () => {
   // Sample data for skills progress
@@ -18,15 +18,24 @@ const MenteeProfile: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto">
       <div className="mb-6">
-        <MenteeProfileCard />
+        <h1 className="text-2xl font-bold mb-4">My Profile</h1>
+        <MenteeNavTabs />
       </div>
       
       <Tabs defaultValue="stats" className="w-full">
-        <TabsList className="mb-6">
-          <TabsTrigger value="stats">Stats</TabsTrigger>
-          <TabsTrigger value="preferences">Preferences</TabsTrigger>
-          <TabsTrigger value="payments">Payments</TabsTrigger>
-          <TabsTrigger value="history">History</TabsTrigger>
+        <TabsList className="mb-6 border-b">
+          <TabsTrigger value="stats" className="data-[state=active]:text-[#A10015] data-[state=active]:border-b-2 data-[state=active]:border-[#A10015]">
+            Stats
+          </TabsTrigger>
+          <TabsTrigger value="preferences" className="data-[state=active]:text-[#A10015] data-[state=active]:border-b-2 data-[state=active]:border-[#A10015]">
+            Preferences
+          </TabsTrigger>
+          <TabsTrigger value="payments" className="data-[state=active]:text-[#A10015] data-[state=active]:border-b-2 data-[state=active]:border-[#A10015]">
+            Payments
+          </TabsTrigger>
+          <TabsTrigger value="history" className="data-[state=active]:text-[#A10015] data-[state=active]:border-b-2 data-[state=active]:border-[#A10015]">
+            History
+          </TabsTrigger>
         </TabsList>
         
         <TabsContent value="stats">
@@ -35,7 +44,7 @@ const MenteeProfile: React.FC = () => {
             <TimeSpent totalSessions={12} />
           </div>
           
-          <div className="mt-6 bg-white shadow rounded-lg p-4">
+          <div className="mt-6 bg-white shadow rounded-lg p-4 border-l-4 border-[#A10015]">
             <h2 className="text-lg font-semibold mb-4">Session History</h2>
             
             <div className="space-y-4">
@@ -48,7 +57,7 @@ const MenteeProfile: React.FC = () => {
                       <p className="text-xs text-gray-500">July {10 + item}, 2024</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-sm font-medium text-[#336dce]">1.5 hours</p>
+                      <p className="text-sm font-medium text-[#A10015]">1.5 hours</p>
                       <p className="text-xs text-gray-500">Completed</p>
                     </div>
                   </div>
@@ -59,21 +68,21 @@ const MenteeProfile: React.FC = () => {
         </TabsContent>
         
         <TabsContent value="preferences">
-          <div className="bg-white shadow rounded-lg p-6">
+          <div className="bg-white shadow rounded-lg p-6 border-t-4 border-[#A10015]">
             <h2 className="text-lg font-semibold mb-4">Profile Preferences</h2>
             <p className="text-gray-600">Settings and preferences will be displayed here.</p>
           </div>
         </TabsContent>
         
         <TabsContent value="payments">
-          <div className="bg-white shadow rounded-lg p-6">
+          <div className="bg-white shadow rounded-lg p-6 border-t-4 border-[#A10015]">
             <h2 className="text-lg font-semibold mb-4">Payment Methods</h2>
             <p className="text-gray-600">Your payment methods and history will be displayed here.</p>
           </div>
         </TabsContent>
         
         <TabsContent value="history">
-          <div className="bg-white shadow rounded-lg p-6">
+          <div className="bg-white shadow rounded-lg p-6 border-t-4 border-[#A10015]">
             <h2 className="text-lg font-semibold mb-4">Session History</h2>
             <p className="text-gray-600">Your complete session history will be displayed here.</p>
           </div>

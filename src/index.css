@@ -138,7 +138,7 @@
 }
 
 .mentee-profile-banner {
-  @apply w-full h-32 bg-gradient-to-r from-[#00095C] to-[#336dce];
+  @apply w-full h-32 bg-gradient-to-r from-[#00095C] to-[#A10015];
 }
 
 .mentee-tab-active {
@@ -150,5 +150,25 @@
 }
 
 .mentor-card-rating {
-  @apply flex items-center text-yellow-500;
+  @apply flex items-center text-[#A10015];
+}
+
+.mentee-highlight {
+  @apply text-[#A10015];
+}
+
+.mentee-border {
+  @apply border-[#A10015];
+}
+
+.mentee-bg {
+  @apply bg-[#A10015]/10;
+}
+
+.mentee-btn {
+  @apply bg-[#A10015] text-white hover:bg-[#A10015]/90;
+}
+
+.mentee-btn-outline {
+  @apply border border-[#A10015] text-[#A10015] hover:bg-[#A10015]/10;
 }

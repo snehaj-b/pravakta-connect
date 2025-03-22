@@ -60,14 +60,14 @@ const MenteeCommunity: React.FC = () => {
         <div className="relative">
           <Input 
             placeholder="Add Communities" 
-            className="pl-10"
+            className="pl-10 border-[#A10015]/20 focus-visible:ring-[#A10015]/20"
           />
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-[#A10015]" size={16} />
         </div>
       </div>
       
-      <div className="bg-white shadow rounded-lg p-4">
-        <h2 className="text-lg font-semibold mb-4">My Communities</h2>
+      <div className="bg-white shadow rounded-lg p-4 border-l-4 border-[#A10015]">
+        <h2 className="text-xl font-semibold mb-4">My Communities</h2>
         <div className="space-y-3">
           {filteredCommunities.map((community) => (
             <CommunityCard
