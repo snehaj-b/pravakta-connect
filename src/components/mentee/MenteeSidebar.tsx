@@ -1,6 +1,6 @@
 
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { 
   Home, 
   Users, 
@@ -8,18 +8,27 @@ import {
   Calendar, 
   User,
   Search,
-  Settings
+  Settings,
+  LogOut
 } from "lucide-react";
+import { toast } from "sonner";
 
 const MenteeSidebar: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    toast.success("Logged out successfully");
+    navigate("/login");
+  };
+
   return (
     <aside className="w-16 bg-white shadow-md z-10 flex flex-col items-center py-6 border-r">
       <div className="space-y-8 flex flex-col items-center flex-1">
         <NavLink
           to="/mentee/dashboard"
           className={({ isActive }) =>
-            `w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#336dce]/10 transition-colors ${
-              isActive ? "text-[#336dce] bg-[#336dce]/10" : "text-gray-500"
+            `w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#A10015]/10 transition-colors ${
+              isActive ? "text-[#A10015] bg-[#A10015]/10" : "text-gray-500"
             }`
           }
         >
@@ -29,8 +38,8 @@ const MenteeSidebar: React.FC = () => {
         <NavLink
           to="/mentee/find-mentor"
           className={({ isActive }) =>
-            `w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#336dce]/10 transition-colors ${
-              isActive ? "text-[#336dce] bg-[#336dce]/10" : "text-gray-500"
+            `w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#A10015]/10 transition-colors ${
+              isActive ? "text-[#A10015] bg-[#A10015]/10" : "text-gray-500"
             }`
           }
         >
@@ -40,8 +49,8 @@ const MenteeSidebar: React.FC = () => {
         <NavLink
           to="/mentee/community"
           className={({ isActive }) =>
-            `w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#336dce]/10 transition-colors ${
-              isActive ? "text-[#336dce] bg-[#336dce]/10" : "text-gray-500"
+            `w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#A10015]/10 transition-colors ${
+              isActive ? "text-[#A10015] bg-[#A10015]/10" : "text-gray-500"
             }`
           }
         >
@@ -51,8 +60,8 @@ const MenteeSidebar: React.FC = () => {
         <NavLink
           to="/mentee/calendar"
           className={({ isActive }) =>
-            `w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#336dce]/10 transition-colors ${
-              isActive ? "text-[#336dce] bg-[#336dce]/10" : "text-gray-500"
+            `w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#A10015]/10 transition-colors ${
+              isActive ? "text-[#A10015] bg-[#A10015]/10" : "text-gray-500"
             }`
           }
         >
@@ -62,8 +71,8 @@ const MenteeSidebar: React.FC = () => {
         <NavLink
           to="/mentee/profile"
           className={({ isActive }) =>
-            `w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#336dce]/10 transition-colors ${
-              isActive ? "text-[#336dce] bg-[#336dce]/10" : "text-gray-500"
+            `w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#A10015]/10 transition-colors ${
+              isActive ? "text-[#A10015] bg-[#A10015]/10" : "text-gray-500"
             }`
           }
         >
@@ -72,11 +81,17 @@ const MenteeSidebar: React.FC = () => {
       </div>
 
       <div className="mt-auto space-y-4">
-        <button className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#336dce]/10 transition-colors text-gray-500">
+        <button className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#A10015]/10 transition-colors text-gray-500">
           <Search size={24} />
         </button>
-        <button className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#336dce]/10 transition-colors text-gray-500">
+        <button className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#A10015]/10 transition-colors text-gray-500">
           <Settings size={24} />
+        </button>
+        <button 
+          onClick={handleLogout}
+          className="w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#A10015]/10 transition-colors text-[#A10015]"
+        >
+          <LogOut size={24} />
         </button>
       </div>
     </aside>

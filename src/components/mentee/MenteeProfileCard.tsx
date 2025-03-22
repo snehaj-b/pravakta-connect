@@ -18,7 +18,7 @@ const MenteeProfileCard: React.FC<MenteeProfileCardProps> = ({
   communitiesJoined = 5,
   profilePicture = "/lovable-uploads/94db9bc8-af8d-4bcc-8287-1a47d17ca41c.png"
 }) => {
-  return <div className="bg-white shadow rounded-lg overflow-hidden mb-6">
+  return <div className="bg-white shadow rounded-lg overflow-hidden mb-6 border-t-4 border-[#A10015]">
       <div className="flex items-center p-4">
         <div className="w-20 h-20 overflow-hidden rounded-lg mr-4">
           <img
@@ -35,7 +35,7 @@ const MenteeProfileCard: React.FC<MenteeProfileCardProps> = ({
               <p className="text-gray-600">@{username}</p>
               <p className="text-gray-600">Communities Joined: {communitiesJoined}</p>
             </div>
-            <Button variant="ghost" size="icon" className="text-gray-600">
+            <Button variant="ghost" size="icon" className="text-[#A10015] hover:bg-[#A10015]/10">
               <PencilLine size={18} />
             </Button>
           </div>
