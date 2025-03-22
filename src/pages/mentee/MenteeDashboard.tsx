@@ -66,12 +66,14 @@ const MenteeDashboard: React.FC = () => {
             className="w-full h-full object-cover mix-blend-overlay opacity-30"
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="max-w-md w-full px-4">
+            <div className="max-w-md w-full px-4 relative">
               <Input 
-                className="bg-white/90 backdrop-blur-sm border-0 shadow-lg" 
+                className="bg-white/90 backdrop-blur-sm border-0 shadow-lg pr-10" 
                 placeholder="Search for mentors, skills, or sessions..."
-                suffix={<Search className="text-[#A10015]" size={16} />}
               />
+              <div className="absolute right-8 top-1/2 transform -translate-y-1/2 text-[#A10015]">
+                <Search size={16} />
+              </div>
             </div>
           </div>
         </div>

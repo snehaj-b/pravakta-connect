@@ -8,6 +8,34 @@ import MenteeNavTabs from "@/components/mentee/MenteeNavTabs";
 const MenteeCalendar: React.FC = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
   
+  // Mock data for upcoming sessions
+  const upcomingSessions = [
+    {
+      id: "1",
+      topic: "React Hooks Deep Dive",
+      mentorName: "Alex Johnson",
+      date: "Jul 24, 2024",
+      time: "4:00 PM",
+      profileImage: "/mentor1.webp"
+    },
+    {
+      id: "2",
+      topic: "Building REST APIs",
+      mentorName: "Sarah Miller",
+      date: "Jul 26, 2024",
+      time: "2:30 PM",
+      profileImage: "/mentor2.webp"
+    },
+    {
+      id: "3",
+      topic: "UI/UX Principles",
+      mentorName: "David Chen",
+      date: "Jul 29, 2024",
+      time: "10:00 AM",
+      profileImage: "/mentor3.webp"
+    }
+  ];
+  
   return (
     <div className="max-w-5xl mx-auto">
       <div className="mb-6">
@@ -36,7 +64,7 @@ const MenteeCalendar: React.FC = () => {
         </div>
         
         <div className="md:col-span-1">
-          <UpcomingSessions />
+          <UpcomingSessions sessions={upcomingSessions} />
         </div>
       </div>
     </div>
