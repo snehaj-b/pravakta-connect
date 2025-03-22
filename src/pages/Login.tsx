@@ -19,12 +19,18 @@ const Login = () => {
       toast.error("Please fill in all fields");
       return;
     }
-    // Here you would typically handle the login logic
-    toast.success(`Logged in as ${role}`);
-    navigate("/");
+    
+    if (role === "mentee") {
+      toast.success("Logged in as mentee");
+      navigate("/mentee/dashboard");
+    } else {
+      toast.success("Logged in as mentor");
+      navigate("/");
+    }
   };
   
-  return <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
+  return (
+    <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
       <FloatingShapes />
       
       <div className="w-full max-w-md p-8 rounded-2xl bg-white/80 backdrop-blur-lg shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative z-10 fade-in border border-white/20">
@@ -70,7 +76,8 @@ const Login = () => {
           </p>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 export default Login;

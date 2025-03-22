@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -117,4 +118,37 @@
   100% {
     transform: scale(1);
   }
+}
+
+/* Mentee section styles */
+.mentee-sidebar-icon {
+  @apply w-12 h-12 flex items-center justify-center rounded-full transition-colors;
+}
+
+.mentee-sidebar-icon.active {
+  @apply text-[#336dce] bg-[#336dce]/10;
+}
+
+.mentee-sidebar-icon:hover {
+  @apply bg-[#336dce]/10;
+}
+
+.mentee-card {
+  @apply bg-white shadow rounded-lg overflow-hidden;
+}
+
+.mentee-profile-banner {
+  @apply w-full h-32 bg-gradient-to-r from-[#00095C] to-[#336dce];
+}
+
+.mentee-tab-active {
+  @apply bg-[#336dce] text-white;
+}
+
+.mentee-tab-inactive {
+  @apply bg-white text-[#336dce] border border-[#336dce];
+}
+
+.mentor-card-rating {
+  @apply flex items-center text-yellow-500;
 }
