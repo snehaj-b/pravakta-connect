@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Users, User } from "lucide-react";
+import { Users, MessageSquare, Calendar } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const MenteeNavTabs: React.FC = () => {
@@ -17,13 +17,23 @@ const MenteeNavTabs: React.FC = () => {
         </Button>
       </Link>
       
-      <Link to="/mentee/profile">
+      <Link to="/mentee/community">
         <Button 
-          variant={location.pathname.includes("profile") ? "default" : "outline"}
-          className={`${location.pathname.includes("profile") ? "bg-[#336dce]" : ""}`}
+          variant={location.pathname.includes("community") ? "default" : "outline"}
+          className={`${location.pathname.includes("community") ? "bg-[#336dce]" : ""}`}
         >
-          <User size={18} className="mr-2" />
-          Profile
+          <MessageSquare size={18} className="mr-2" />
+          Community
+        </Button>
+      </Link>
+      
+      <Link to="/mentee/calendar">
+        <Button 
+          variant={location.pathname.includes("calendar") ? "default" : "outline"}
+          className={`${location.pathname.includes("calendar") ? "bg-[#336dce]" : ""}`}
+        >
+          <Calendar size={18} className="mr-2" />
+          Calendar
         </Button>
       </Link>
     </div>;

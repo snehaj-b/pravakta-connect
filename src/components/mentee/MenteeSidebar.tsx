@@ -4,6 +4,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { 
   Home, 
   Users, 
+  MessageSquare, 
+  Calendar, 
   User,
   Search,
   Settings,
@@ -42,6 +44,28 @@ const MenteeSidebar: React.FC = () => {
           }
         >
           <Users size={24} />
+        </NavLink>
+
+        <NavLink
+          to="/mentee/community"
+          className={({ isActive }) =>
+            `w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#336dce]/10 transition-colors ${
+              isActive ? "text-[#336dce] bg-[#336dce]/10" : "text-gray-500"
+            }`
+          }
+        >
+          <MessageSquare size={24} />
+        </NavLink>
+
+        <NavLink
+          to="/mentee/calendar"
+          className={({ isActive }) =>
+            `w-12 h-12 flex items-center justify-center rounded-full hover:bg-[#336dce]/10 transition-colors ${
+              isActive ? "text-[#336dce] bg-[#336dce]/10" : "text-gray-500"
+            }`
+          }
+        >
+          <Calendar size={24} />
         </NavLink>
 
         <NavLink
