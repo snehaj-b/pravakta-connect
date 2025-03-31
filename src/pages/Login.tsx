@@ -25,7 +25,7 @@ const Login = () => {
       navigate("/mentee/dashboard");
     } else {
       toast.success("Logged in as mentor");
-      navigate("/");
+      navigate("/mentor/dashboard");
     }
   };
   
