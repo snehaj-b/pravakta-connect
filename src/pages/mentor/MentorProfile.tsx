@@ -1,12 +1,10 @@
-
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Pencil, ChevronRight } from "lucide-react";
 import { 
-  Chart,
-  ChartConfig, 
   ChartContainer, 
+  ChartConfig, 
   ChartTooltip, 
   ChartTooltipContent
 } from "@/components/ui/chart";
