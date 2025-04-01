@@ -15,7 +15,7 @@ const mentors = [
     field: "Machine Learning",
     rating: 4.9,
     hours: 2500,
-    image: "/mentor1.webp",
+    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3",
     qualifications: "Ph.D. in Computer Science, Stanford",
   },
   {
@@ -23,7 +23,7 @@ const mentors = [
     field: "Business Strategy",
     rating: 4.8,
     hours: 1800,
-    image: "/mentor2.webp",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3",
     qualifications: "MBA Harvard, Former CEO",
   },
   {
@@ -31,7 +31,7 @@ const mentors = [
     field: "Biomedical Engineering",
     rating: 4.9,
     hours: 2100,
-    image: "/mentor3.webp",
+    image: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3",
     qualifications: "Ph.D. in Bioengineering, MIT",
   },
 ];
@@ -123,21 +123,31 @@ const Index = () => {
                 {
                   title: "Expert Mentors",
                   description: "Learn from industry leaders and accomplished professionals",
+                  imageUrl: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3",
                 },
                 {
                   title: "Personalized Guidance",
                   description: "Get customized learning paths tailored to your goals",
+                  imageUrl: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2032&auto=format&fit=crop&ixlib=rb-4.0.3",
                 },
                 {
                   title: "Flexible Schedule",
                   description: "Connect with mentors at times that work for you",
+                  imageUrl: "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3",
                 },
               ].map((benefit, index) => (
                 <div
                   key={index}
-                  className="p-6 rounded-lg bg-white/50 fade-in"
+                  className="p-6 rounded-lg bg-white/50 fade-in overflow-hidden"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
+                  <div className="h-40 mb-4 rounded-lg overflow-hidden">
+                    <img 
+                      src={benefit.imageUrl} 
+                      alt={benefit.title} 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                   <p className="text-muted-foreground">{benefit.description}</p>
                 </div>

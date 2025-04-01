@@ -1,11 +1,12 @@
 
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import FloatingShapes from "@/components/FloatingShapes";
+import { ArrowLeft } from "lucide-react";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -32,6 +33,14 @@ const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
       <FloatingShapes />
+      
+      {/* Back Button */}
+      <Link 
+        to="/"
+        className="absolute top-6 left-6 z-20 flex items-center justify-center w-10 h-10 rounded-full bg-white/30 backdrop-blur-sm hover:bg-white/40 transition-all duration-200"
+      >
+        <ArrowLeft size={20} className="text-gray-800" />
+      </Link>
       
       <div className="w-full max-w-md p-8 rounded-2xl bg-white/80 backdrop-blur-lg shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative z-10 fade-in border border-white/20">
         <div className="text-center mb-8">
