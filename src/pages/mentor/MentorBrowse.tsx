@@ -84,24 +84,24 @@ const SessionGroup: React.FC<{
 
 const MentorBrowse: React.FC = () => {
   const trendingSessions = [
-    { id: 1, name: "John Doe", skill: "React.js", date: "June 20", image: "/public/placeholder.svg" },
-    { id: 2, name: "Jane Smith", skill: "UI/UX Design", date: "June 22", image: "/public/placeholder.svg" },
-    { id: 3, name: "Mike Johnson", skill: "Node.js", date: "June 24", image: "/public/placeholder.svg" },
-    { id: 4, name: "Anna Brown", skill: "Python", date: "June 25", image: "/public/placeholder.svg" },
+    { id: 1, name: "John Doe", skill: "React.js", date: "June 20", image: "/mentor1.webp" },
+    { id: 2, name: "Jane Smith", skill: "UI/UX Design", date: "June 22", image: "/mentor2.webp" },
+    { id: 3, name: "Mike Johnson", skill: "Node.js", date: "June 24", image: "/mentor3.webp" },
+    { id: 4, name: "Anna Brown", skill: "Python", date: "June 25", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3" },
   ];
 
   const recommendedSessions = [
-    { id: 5, name: "Sam Wilson", skill: "Mobile Dev", date: "June 21", image: "/public/placeholder.svg" },
-    { id: 6, name: "Emma Davis", skill: "AWS", date: "June 23", image: "/public/placeholder.svg" },
-    { id: 7, name: "Ryan Garcia", skill: "Data Science", date: "June 26", image: "/public/placeholder.svg" },
-    { id: 8, name: "Lisa Chen", skill: "JavaScript", date: "June 27", image: "/public/placeholder.svg" },
+    { id: 5, name: "Sam Wilson", skill: "Mobile Dev", date: "June 21", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" },
+    { id: 6, name: "Emma Davis", skill: "AWS", date: "June 23", image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" },
+    { id: 7, name: "Ryan Garcia", skill: "Data Science", date: "June 26", image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1980&auto=format&fit=crop&ixlib=rb-4.0.3" },
+    { id: 8, name: "Lisa Chen", skill: "JavaScript", date: "June 27", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3" },
   ];
 
   const freeSessions = [
-    { id: 9, name: "Tom Hardy", skill: "DevOps", date: "June 22", image: "/public/placeholder.svg" },
-    { id: 10, name: "Sarah Johnson", skill: "Flutter", date: "June 24", image: "/public/placeholder.svg" },
-    { id: 11, name: "David Lee", skill: "Vue.js", date: "June 25", image: "/public/placeholder.svg" },
-    { id: 12, name: "Rachel Kim", skill: "GraphQL", date: "June 28", image: "/public/placeholder.svg" },
+    { id: 9, name: "Tom Hardy", skill: "DevOps", date: "June 22", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" },
+    { id: 10, name: "Sarah Johnson", skill: "Flutter", date: "June 24", image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" },
+    { id: 11, name: "David Lee", skill: "Vue.js", date: "June 25", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" },
+    { id: 12, name: "Rachel Kim", skill: "GraphQL", date: "June 28", image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" },
   ];
 
   return (

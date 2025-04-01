@@ -34,24 +34,24 @@ const CommunitySection = () => {
           <div className="grid grid-cols-2 gap-4 fade-in">
             <div className="space-y-4">
               <img
-                src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXBidzd2Y3g4a3ZsZG9wZnp5dXBvdDR4ajY3dWp3MHE1Y3FlbW95ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIPEqDGUULpEU0aQ/giphy.gif"
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
                 alt="Community Discussion"
                 className="rounded-lg shadow-lg hover-scale w-full h-48 object-cover"
               />
               <img
-                src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWhndGpoMXhqNzZ6Y3c2eGlhOTkydnQxNmFyYnhiNG51ZGZ2OWx4dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0HlGu6yGT8X51Gko/giphy.gif"
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3"
                 alt="Study Group"
                 className="rounded-lg shadow-lg hover-scale w-full h-48 object-cover"
               />
             </div>
             <div className="space-y-4 mt-8">
               <img
-                src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXBidzd2Y3g4a3ZsZG9wZnp5dXBvdDR4ajY3dWp3MHE1Y3FlbW95ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIPEqDGUULpEU0aQ/giphy.gif"
+                src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
                 alt="Virtual Meetup"
                 className="rounded-lg shadow-lg hover-scale w-full h-48 object-cover"
               />
               <img
-                src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW9oZ3V5dXhtOHowYjBrcjJieXFibmRoeWR5amFuOWU4Y2M4bmVqbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT9IgzoKnwFNmISR8I/giphy.gif"
+                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
                 alt="Workshop"
                 className="rounded-lg shadow-lg hover-scale w-full h-48 object-cover"
               />

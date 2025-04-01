@@ -1,3 +1,4 @@
+
 import React from "react";
 import MenteeNavTabs from "@/components/mentee/MenteeNavTabs";
 import { Button } from "@/components/ui/button";
@@ -17,7 +18,7 @@ const SessionCard = ({
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {sessions.map((session, index) => <div key={index} className="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition-shadow">
             <div className="h-32 bg-blue-100">
-              <img alt="Session" className="w-full h-full object-cover" src="https://www.google.com/imgres?q=images%20of%20mit%20professor%20hd&imgurl=https%3A%2F%2Fnews.mit.edu%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fnews_article__image_gallery%2Fpublic%2Fimages%2F201602%2F1800x1200_Agustin-Rayo-1-28-16-58.jpg%3Fitok%3D-8P0vcMP&imgrefurl=https%3A%2F%2Fnews.mit.edu%2F2016%2Fphilosopher-agust%25C3%25ADn-rayo-named-associate-dean-mit-shass-0216&docid=JAaHi7ba-L_s6M&tbnid=PLPiSFpwS7TOPM&vet=12ahUKEwj_l5TLuraMAxXmlFYBHYpoAdQQM3oECGQQAA..i&w=900&h=600&hcb=2&ved=2ahUKEwj_l5TLuraMAxXmlFYBHYpoAdQQM3oECGQQAA" />
+              <img alt="Session" className="w-full h-full object-cover" src={session.image} />
             </div>
             <div className="p-3">
               <h3 className="font-medium">{session.name}</h3>
@@ -33,41 +34,50 @@ const MenteeDashboard: React.FC = () => {
   const trendingSessions = [{
     name: "Advanced React Patterns",
     skill: "React.js",
-    date: "July 20, 2024"
+    date: "July 20, 2024",
+    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
   }, {
     name: "UX Research Methods",
     skill: "UX Design",
-    date: "July 22, 2024"
+    date: "July 22, 2024",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3"
   }, {
     name: "Flutter App Development",
     skill: "Flutter",
-    date: "July 23, 2024"
+    date: "July 23, 2024",
+    image: "https://images.unsplash.com/photo-1558104631-0fa41a8f6c20?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
   }];
   const recommendedSessions = [{
     name: "Responsive Web Design",
     skill: "CSS",
-    date: "July 25, 2024"
+    date: "July 25, 2024",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
   }, {
     name: "API Integration",
     skill: "Backend Dev",
-    date: "July 27, 2024"
+    date: "July 27, 2024",
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
   }, {
     name: "Node.js Fundamentals",
     skill: "Node.js",
-    date: "July 29, 2024"
+    date: "July 29, 2024",
+    image: "https://images.unsplash.com/photo-1593642531955-b62e17bdaa9c?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3"
   }];
   const freeSessions = [{
     name: "Git & GitHub Workshop",
     skill: "Version Control",
-    date: "July 30, 2024"
+    date: "July 30, 2024",
+    image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
   }, {
     name: "Web Accessibility",
     skill: "HTML/CSS",
-    date: "August 2, 2024"
+    date: "August 2, 2024",
+    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
   }, {
     name: "JavaScript Basics",
     skill: "JavaScript",
-    date: "August 5, 2024"
+    date: "August 5, 2024",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
   }];
   return <div className="max-w-5xl mx-auto">
       <div className="mb-6">
