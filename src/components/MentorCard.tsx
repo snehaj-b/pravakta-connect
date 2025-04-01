@@ -1,7 +1,8 @@
 
 import React from "react";
-import { Star, Clock, ChevronDown } from "lucide-react";
+import { Star, Clock, ChevronDown, User } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 interface MentorCardProps {
   id?: string;
@@ -26,9 +27,16 @@ const MentorCard: React.FC<MentorCardProps> = ({
 }) => {
   return (
     <Link to={`/mentee/mentor/${id}`} className="block">
-      <div className="bg-white shadow rounded-lg overflow-hidden hover:shadow-md transition-shadow">
-        <div className="aspect-w-16 aspect-h-9">
-          <img src={image} alt={name} className="w-full h-48 object-cover" />
+      <div className="bg-white shadow rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+        <div className="aspect-w-16 aspect-h-9 bg-blue-50">
+          <div className="w-full h-48 flex items-center justify-center">
+            <Avatar className="w-24 h-24">
+              <AvatarImage src={image} alt={name} />
+              <AvatarFallback className="bg-blue-100">
+                <User className="w-12 h-12 text-blue-500" />
+              </AvatarFallback>
+            </Avatar>
+          </div>
         </div>
         <div className="p-4">
           <h3 className="text-lg font-semibold">{name}</h3>

@@ -1,3 +1,4 @@
+
 import React from "react";
 import MenteeNavTabs from "@/components/mentee/MenteeNavTabs";
 import { Button } from "@/components/ui/button";
@@ -86,7 +87,6 @@ const MenteeDashboard: React.FC = () => {
       
       <div className="mb-6 relative">
         <div className="h-40 bg-gradient-to-r from-[#00095C] to-[#A10015] rounded-lg overflow-hidden relative">
-          <img src="/lovable-uploads/94db9bc8-af8d-4bcc-8287-1a47d17ca41c.png" alt="Dashboard Banner" className="w-full h-full object-cover mix-blend-overlay opacity-30" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="max-w-md w-full px-4 relative">
               <Input className="bg-white/90 backdrop-blur-sm border-0 shadow-lg pr-10" placeholder="Search for mentors, skills, or sessions..." />
