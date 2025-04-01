@@ -1,7 +1,8 @@
 
 import React from "react";
-import { PencilLine } from "lucide-react";
+import { PencilLine, UserCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 interface MenteeProfileCardProps {
   name?: string;
@@ -20,12 +21,13 @@ const MenteeProfileCard: React.FC<MenteeProfileCardProps> = ({
 }) => {
   return <div className="bg-white shadow rounded-lg overflow-hidden mb-6 border-t-4 border-[#A10015]">
       <div className="flex items-center p-4">
-        <div className="w-20 h-20 overflow-hidden rounded-lg mr-4 border-2 border-[#A10015]/20">
-          <img
-            src={profilePicture}
-            alt="Profile"
-            className="w-full h-full object-cover"
-          />
+        <div className="w-20 h-20 overflow-hidden rounded-lg mr-4 border-2 border-[#A10015]/20 flex items-center justify-center bg-gray-100">
+          <Avatar className="w-full h-full">
+            <AvatarImage src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop" alt={name} />
+            <AvatarFallback>
+              <UserCircle className="w-16 h-16 text-[#A10015]" />
+            </AvatarFallback>
+          </Avatar>
         </div>
         <div className="flex-1">
           <div className="flex justify-between items-start">
